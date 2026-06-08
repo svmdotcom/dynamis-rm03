@@ -1,4 +1,4 @@
-export { PlaceholderScreen as HomeScreen } from './PlaceholderScreen';
+export { HomeScreen } from './HomeScreen';
 export { PlaceholderScreen as SearchScreen } from './PlaceholderScreen';
 export { PlaceholderScreen as ResultScreen } from './PlaceholderScreen';
 export { PlaceholderScreen as PrepareScreen } from './PlaceholderScreen';

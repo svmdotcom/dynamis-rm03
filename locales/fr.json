@@ -14,15 +14,19 @@
     "no": "Non"
   },
   "home": {
-    "title": "Dynamis",
-    "subtitle": "Préparation homéopathique",
+    "title": "Dynamis RM03",
+    "subtitle": "Codes et réglages pour la RM03",
     "searchPlaceholder": "Nom ou code du remède...",
     "symptomSearch": "Recherche par symptômes",
     "favorites": "Favoris",
     "manual": "Manuel",
     "settings": "Paramètres",
     "copyMode": "Mode copie",
-    "depotMode": "Mode dépôt"
+    "depotMode": "Mode dépôt",
+    "searchRemedy": "Rechercher un remède",
+    "prepareByCode": "Préparation par code",
+    "copyRemedy": "Copier un échantillon",
+    "devStatus": "Android Dev Client validé"
   },
   "search": {
     "title": "Recherche",

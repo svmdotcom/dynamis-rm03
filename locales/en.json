@@ -14,15 +14,19 @@
     "no": "No"
   },
   "home": {
-    "title": "Dynamis",
-    "subtitle": "Homeopathic preparation",
+    "title": "Dynamis RM03",
+    "subtitle": "Codes and settings for RM03",
     "searchPlaceholder": "Remedy name or code...",
     "symptomSearch": "Symptom search",
     "favorites": "Favorites",
     "manual": "Manual",
     "settings": "Settings",
     "copyMode": "Copy mode",
-    "depotMode": "Depot mode"
+    "depotMode": "Depot mode",
+    "searchRemedy": "Search a remedy",
+    "prepareByCode": "Prepare by code",
+    "copyRemedy": "Copy a sample",
+    "devStatus": "Android Dev Client validated"
   },
   "search": {
     "title": "Search",
