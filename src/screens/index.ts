@@ -1,5 +1,5 @@
 export { HomeScreen } from './HomeScreen';
-export { PlaceholderScreen as SearchScreen } from './PlaceholderScreen';
+export { SearchScreen } from './SearchScreen';
 export { PlaceholderScreen as ResultScreen } from './PlaceholderScreen';
 export { PlaceholderScreen as PrepareScreen } from './PlaceholderScreen';
 export { PlaceholderScreen as SymptomSearchScreen } from './PlaceholderScreen';

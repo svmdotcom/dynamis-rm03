@@ -54,5 +54,13 @@ export function runSearch(
     return exact.map(item => ({ item, score: 0, isFuzzy: false }));
   }
 
+  const substring = entries.filter(e =>
+    e.name.toLowerCase().includes(lowerQuery) ||
+    e.aliases?.some(a => a.toLowerCase().includes(lowerQuery))
+  );
+  if (substring.length > 0) {
+    return substring.map(item => ({ item, score: 0, isFuzzy: false }));
+  }
+
   return nameFuse.search(trimmed).map(r => ({ item: r.item, score: r.score, isFuzzy: true }));
 }
