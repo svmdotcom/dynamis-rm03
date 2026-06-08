@@ -1,0 +1,90 @@
+{
+  "common": {
+    "ok": "OK",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "back": "Back",
+    "close": "Close",
+    "search": "Search",
+    "loading": "Loading...",
+    "error": "Error",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "home": {
+    "title": "Dynamis",
+    "subtitle": "Homeopathic preparation",
+    "searchPlaceholder": "Remedy name or code...",
+    "symptomSearch": "Symptom search",
+    "favorites": "Favorites",
+    "manual": "Manual",
+    "settings": "Settings",
+    "copyMode": "Copy mode",
+    "depotMode": "Depot mode"
+  },
+  "search": {
+    "title": "Search",
+    "placeholder": "Remedy name or code...",
+    "noResults": "No results",
+    "noResultsHint": "Check spelling or try another term",
+    "searching": "Searching..."
+  },
+  "result": {
+    "title": "Result",
+    "name": "Name",
+    "code": "Code",
+    "category": "Category",
+    "prepare": "Prepare",
+    "addToFavorites": "Add to favorites",
+    "removeFromFavorites": "Remove from favorites",
+    "selectPotency": "Select potency"
+  },
+  "prepare": {
+    "title": "Preparation",
+    "buttons": "9-button settings",
+    "potencyType": "Potency type",
+    "potencyHeight": "Height",
+    "start": "Start",
+    "stop": "Stop",
+    "reset": "Reset",
+    "inProgress": "In progress...",
+    "done": "Done",
+    "count": "Strokes performed"
+  },
+  "symptomSearch": {
+    "title": "Symptom search",
+    "placeholder": "Describe the symptom...",
+    "noResults": "No remedy found",
+    "results": "Suggested remedies"
+  },
+  "favorites": {
+    "title": "Favorites",
+    "empty": "No favorites saved",
+    "emptyHint": "Add remedies from the result page",
+    "added": "Added to favorites",
+    "removed": "Removed from favorites"
+  },
+  "manual": {
+    "title": "Manual"
+  },
+  "copyMode": {
+    "title": "Copy mode",
+    "description": "Copy from an existing remedy"
+  },
+  "depotMode": {
+    "title": "Depot mode",
+    "description": "Deposit on neutral support"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "languageFr": "Français",
+    "languageEn": "English",
+    "theme": "Theme",
+    "themeDark": "Dark",
+    "themeLight": "Light",
+    "version": "Version"
+  }
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "id": "0001",
+    "name": "Aconitum",
+    "code": "5378",
+    "category": "Polychrest",
+    "search": "aconitum peur choc fievre aigue angoisse",
+    "aliases": ["Acon", "ACO"]
+  },
+  {
+    "id": "0002",
+    "name": "Aconitum Napellus",
+    "code": "2557",
+    "category": "Polychrest",
+    "search": "aconitum napellus peur choc fievre aigue angoisse",
+    "aliases": ["Aconit", "Acon-n"]
+  },
+  {
+    "id": "0003",
+    "name": "Arnica Montana",
+    "code": "8687",
+    "category": "Polychrest",
+    "search": "arnica montana traumatisme choc contusion douleur",
+    "aliases": ["Arnica", "ARN"]
+  },
+  {
+    "id": "0004",
+    "name": "Belladonna",
+    "code": "9633",
+    "category": "Polychrest",
+    "search": "belladonna fievre inflammation chaleur congestion",
+    "aliases": ["Bell", "BEL"]
+  },
+  {
+    "id": "0005",
+    "name": "Cocculus Ind",
+    "code": "1604",
+    "category": "Polychrest",
+    "search": "cocculus indicus mal des transports fatigue epuisement vertige",
+    "aliases": ["Cocc", "Cocculus Indicus"]
+  },
+  {
+    "id": "0006",
+    "name": "Histidine",
+    "code": "4431",
+    "category": "Biotherapique",
+    "search": "histidine acide amine allergie"
+  },
+  {
+    "id": "0007",
+    "name": "Histaminum",
+    "code": "75843",
+    "category": "Biotherapique",
+    "search": "histaminum histamine allergie rhinite urticaire",
+    "aliases": ["Hist"]
+  }
+]

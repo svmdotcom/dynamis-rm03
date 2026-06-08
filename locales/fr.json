@@ -1,0 +1,90 @@
+{
+  "common": {
+    "ok": "OK",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "back": "Retour",
+    "close": "Fermer",
+    "search": "Rechercher",
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "confirm": "Confirmer",
+    "yes": "Oui",
+    "no": "Non"
+  },
+  "home": {
+    "title": "Dynamis",
+    "subtitle": "Préparation homéopathique",
+    "searchPlaceholder": "Nom ou code du remède...",
+    "symptomSearch": "Recherche par symptômes",
+    "favorites": "Favoris",
+    "manual": "Manuel",
+    "settings": "Paramètres",
+    "copyMode": "Mode copie",
+    "depotMode": "Mode dépôt"
+  },
+  "search": {
+    "title": "Recherche",
+    "placeholder": "Nom ou code du remède...",
+    "noResults": "Aucun résultat",
+    "noResultsHint": "Vérifiez l'orthographe ou essayez un autre terme",
+    "searching": "Recherche en cours..."
+  },
+  "result": {
+    "title": "Résultat",
+    "name": "Nom",
+    "code": "Code",
+    "category": "Catégorie",
+    "prepare": "Préparer",
+    "addToFavorites": "Ajouter aux favoris",
+    "removeFromFavorites": "Retirer des favoris",
+    "selectPotency": "Sélectionner la puissance"
+  },
+  "prepare": {
+    "title": "Préparation",
+    "buttons": "Réglage des 9 boutons",
+    "potencyType": "Type de puissance",
+    "potencyHeight": "Hauteur",
+    "start": "Démarrer",
+    "stop": "Arrêter",
+    "reset": "Réinitialiser",
+    "inProgress": "En cours...",
+    "done": "Terminé",
+    "count": "Coups effectués"
+  },
+  "symptomSearch": {
+    "title": "Recherche par symptômes",
+    "placeholder": "Décrivez le symptôme...",
+    "noResults": "Aucun remède trouvé",
+    "results": "Remèdes suggérés"
+  },
+  "favorites": {
+    "title": "Favoris",
+    "empty": "Aucun favori enregistré",
+    "emptyHint": "Ajoutez des remèdes depuis la page résultat",
+    "added": "Ajouté aux favoris",
+    "removed": "Retiré des favoris"
+  },
+  "manual": {
+    "title": "Manuel"
+  },
+  "copyMode": {
+    "title": "Mode copie",
+    "description": "Copie d'un remède existant"
+  },
+  "depotMode": {
+    "title": "Mode dépôt",
+    "description": "Dépôt sur support neutre"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "language": "Langue",
+    "languageFr": "Français",
+    "languageEn": "English",
+    "theme": "Thème",
+    "themeDark": "Sombre",
+    "themeLight": "Clair",
+    "version": "Version"
+  }
+}
