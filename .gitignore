@@ -43,3 +43,12 @@ yarn-error.*
 # source documents (not committed)
 *.docx
 *.doc
+
+# generated script outputs
+scripts/codebook-raw.txt
+scripts/codebook-raw-xml.txt
+scripts/_extract-xml-temp.ps1
+scripts/manual-raw.txt
+
+# local Claude settings
+.claude/settings.local.json
