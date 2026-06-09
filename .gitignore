@@ -49,6 +49,7 @@ scripts/codebook-raw.txt
 scripts/codebook-raw-xml.txt
 scripts/_extract-xml-temp.ps1
 scripts/manual-raw.txt
+scripts/extract-codebook.ps1
 
 # local Claude settings
 .claude/settings.local.json
