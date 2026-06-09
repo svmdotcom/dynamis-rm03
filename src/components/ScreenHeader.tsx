@@ -1,10 +1,12 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Platform, StatusBar } from 'react-native';
 import { useTheme } from '../theme/ThemeContext';
 
 interface Props {
   title: string;
 }
+
+const TOP_INSET = Platform.OS === 'android' ? (StatusBar.currentHeight ?? 24) : 0;
 
 export function ScreenHeader({ title }: Props) {
   const { theme } = useTheme();
@@ -20,8 +22,8 @@ export function ScreenHeader({ title }: Props) {
 
 const styles = StyleSheet.create({
   header: {
-    height: 52,
-    justifyContent: 'center',
+    paddingTop: TOP_INSET + 10,
+    paddingBottom: 12,
     paddingHorizontal: 20,
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
