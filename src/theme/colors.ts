@@ -42,7 +42,29 @@ export const darkTheme: Theme = {
   statusBar: 'light',
 };
 
+export const woodTheme: Theme = {
+  bg: '#2C1A08',
+  card: '#40250E',
+  cardAlt: '#4E2E12',
+  border: '#6A3E18',
+  borderLight: '#7E5030',
+  accent: '#D4A030',
+  accentLight: '#E8BC58',
+  accentAlt: '#B07828',
+  accentAltLight: '#C89040',
+  textPrimary: '#F8EDD8',
+  textSecondary: '#DCC8A0',
+  textMuted: '#9A7E60',
+  textFaint: '#5A3618',
+  warning: '#D49C10',
+  warningText: '#FFF0D0',
+  danger: '#D45040',
+  btnMuted: '#4E2E12',
+  statusBar: 'light',
+};
+
 export const themes: Record<ThemeName, Theme> = {
   light: lightTheme,
   dark: darkTheme,
+  wood: woodTheme,
 };

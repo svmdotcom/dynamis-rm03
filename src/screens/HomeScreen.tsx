@@ -1,10 +1,11 @@
 import React from 'react';
-import { SafeAreaView, View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../types';
 import { useTheme } from '../theme/ThemeContext';
 import { useI18n } from '../i18n';
+import { ScreenBackground } from '../components/ScreenBackground';
 
 type Nav = NativeStackNavigationProp<RootStackParamList, 'Home'>;
 
@@ -14,7 +15,7 @@ export function HomeScreen() {
   const { t } = useI18n();
 
   return (
-    <SafeAreaView style={[styles.container, { backgroundColor: theme.bg }]}>
+    <ScreenBackground style={styles.container}>
       <View style={styles.header}>
         <Text style={[styles.title, { color: theme.textPrimary }]}>{t('home.title')}</Text>
         <Text style={[styles.subtitle, { color: theme.textSecondary }]}>{t('home.subtitle')}</Text>
@@ -25,30 +26,38 @@ export function HomeScreen() {
           style={[styles.card, { backgroundColor: theme.card, borderColor: theme.border }]}
           onPress={() => navigation.navigate('Search')}
         >
-          <Text style={[styles.cardLabel, { color: theme.textPrimary }]}>{t('home.searchRemedy')}</Text>
+          <Text style={[styles.cardLabel, { color: theme.textPrimary }]}>{t('home.findCode')}</Text>
           <Text style={[styles.arrow, { color: theme.accent }]}>{'›'}</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={[styles.card, { backgroundColor: theme.card, borderColor: theme.border }]}
-          onPress={() => navigation.navigate('Search')}
+          onPress={() => navigation.navigate('Favorites')}
         >
-          <Text style={[styles.cardLabel, { color: theme.textPrimary }]}>{t('home.prepareByCode')}</Text>
+          <Text style={[styles.cardLabel, { color: theme.textPrimary }]}>{t('home.favoriteCodes')}</Text>
           <Text style={[styles.arrow, { color: theme.accent }]}>{'›'}</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={[styles.card, { backgroundColor: theme.card, borderColor: theme.border }]}
-          onPress={() => navigation.navigate('CopyMode')}
+          onPress={() => navigation.navigate('Manual')}
         >
-          <Text style={[styles.cardLabel, { color: theme.textPrimary }]}>{t('home.copyRemedy')}</Text>
+          <Text style={[styles.cardLabel, { color: theme.textPrimary }]}>{t('home.manual')}</Text>
+          <Text style={[styles.arrow, { color: theme.accent }]}>{'›'}</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={[styles.card, { backgroundColor: theme.card, borderColor: theme.border }]}
+          onPress={() => navigation.navigate('Settings')}
+        >
+          <Text style={[styles.cardLabel, { color: theme.textPrimary }]}>{t('home.settings')}</Text>
           <Text style={[styles.arrow, { color: theme.accent }]}>{'›'}</Text>
         </TouchableOpacity>
       </View>
 
       <View style={styles.spacer} />
       <Text style={[styles.devStatus, { color: theme.textMuted }]}>{t('home.devStatus')}</Text>
-    </SafeAreaView>
+    </ScreenBackground>
   );
 }
 
@@ -66,9 +75,11 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontWeight: '700',
     marginBottom: 8,
+    textAlign: 'center',
   },
   subtitle: {
     fontSize: 16,
+    textAlign: 'center',
   },
   cards: {
     gap: 12,

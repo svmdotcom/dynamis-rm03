@@ -1,0 +1,113 @@
+{
+  "common": {
+    "ok": "OK",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "delete": "Eliminar",
+    "back": "Volver",
+    "home": "Inicio",
+    "close": "Cerrar",
+    "search": "Buscar",
+    "loading": "Cargando...",
+    "error": "Error",
+    "confirm": "Confirmar",
+    "yes": "Sí",
+    "no": "No"
+  },
+  "home": {
+    "title": "Dynamis RM03",
+    "subtitle": "Códigos y ajustes RM03",
+    "searchPlaceholder": "Nombre o código del remedio...",
+    "symptomSearch": "Búsqueda por síntomas",
+    "favorites": "Favoritos",
+    "manual": "Instrucciones",
+    "settings": "Ajustes",
+    "copyMode": "Modo copia",
+    "depotMode": "Modo depósito",
+    "searchRemedy": "Buscar un remedio",
+    "prepareByCode": "Preparar por código",
+    "copyRemedy": "Copiar una muestra",
+    "devStatus": "Android Dev Client validado",
+    "findCode": "Buscar un código",
+    "favoriteCodes": "Códigos favoritos"
+  },
+  "search": {
+    "title": "Búsqueda",
+    "placeholder": "Nombre o código del remedio...",
+    "noResults": "Sin resultados",
+    "noResultsHint": "Comprueba la ortografía o prueba otro término",
+    "searching": "Buscando..."
+  },
+  "result": {
+    "title": "Resultado",
+    "name": "Nombre",
+    "code": "Código",
+    "category": "Categoría",
+    "prepare": "Preparar",
+    "newSearch": "Nueva búsqueda",
+    "addToFavorites": "Añadir a favoritos",
+    "removeFromFavorites": "Quitar de favoritos",
+    "selectPotency": "Seleccionar potencia"
+  },
+  "prepare": {
+    "title": "Preparación",
+    "buttons": "Ajuste de los 9 botones",
+    "potencyType": "Tipo de potencia",
+    "potencyHeight": "Altura",
+    "start": "Iniciar",
+    "stop": "Detener",
+    "reset": "Reiniciar",
+    "inProgress": "En curso...",
+    "done": "Hecho",
+    "count": "Golpes realizados"
+  },
+  "symptomSearch": {
+    "title": "Búsqueda por síntomas",
+    "placeholder": "Describe el síntoma...",
+    "noResults": "No se encontró ningún remedio",
+    "results": "Remedios sugeridos"
+  },
+  "favorites": {
+    "title": "Favoritos",
+    "empty": "No hay favoritos guardados",
+    "emptyHint": "Añade remedios desde la página de resultados",
+    "added": "Añadido a favoritos",
+    "removed": "Quitado de favoritos"
+  },
+  "manual": {
+    "title": "Manual"
+  },
+  "copyMode": {
+    "title": "Modo copia",
+    "description": "Copia de un remedio existente"
+  },
+  "depotMode": {
+    "title": "Modo depósito",
+    "description": "Depósito en soporte neutro"
+  },
+  "settings": {
+    "title": "Ajustes",
+    "language": "Idioma",
+    "languageAuto": "Automático",
+    "languageFr": "Français",
+    "languageEn": "English",
+    "languageEs": "Español",
+    "theme": "Interfaz",
+    "themeDark": "Oscuro",
+    "themeLight": "Claro",
+    "themeWood": "Madera RM03",
+    "sounds": "Sonidos",
+    "soundsButtons": "Sonidos de botones",
+    "on": "Activado",
+    "off": "Desactivado",
+    "about": "Acerca de",
+    "appVersion": "Versión 1.0.0",
+    "appLocation": "Creada en Biot, 06410, Francia",
+    "appLicense": "Licencia open source MIT",
+    "updates": "Actualizaciones",
+    "currentVersion": "Versión actual: 1.0.0",
+    "updatesInfo": "Las actualizaciones estarán disponibles a través de Google Play cuando la aplicación esté publicada.",
+    "checkUpdates": "Buscar actualizaciones",
+    "version": "Versión"
+  }
+}

@@ -1,6 +1,8 @@
-export type Language = 'fr' | 'en';
+export type Language = 'fr' | 'en' | 'es';
 
-export type ThemeName = 'dark' | 'light';
+export type LanguagePref = 'auto' | Language;
+
+export type ThemeName = 'dark' | 'light' | 'wood';
 
 export interface Theme {
   bg: string;

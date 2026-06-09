@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "dynamis-ts-sdk54",
-    "slug": "dynamis-ts-sdk54",
+    "name": "Dynamis RM03",
+    "slug": "dynamis-rm03",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

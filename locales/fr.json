@@ -5,6 +5,7 @@
     "save": "Enregistrer",
     "delete": "Supprimer",
     "back": "Retour",
+    "home": "Accueil",
     "close": "Fermer",
     "search": "Rechercher",
     "loading": "Chargement...",
@@ -15,18 +16,20 @@
   },
   "home": {
     "title": "Dynamis RM03",
-    "subtitle": "Codes et réglages pour la RM03",
+    "subtitle": "Codes et réglages RM03",
     "searchPlaceholder": "Nom ou code du remède...",
     "symptomSearch": "Recherche par symptômes",
     "favorites": "Favoris",
-    "manual": "Manuel",
+    "manual": "Mode d'emploi",
     "settings": "Paramètres",
     "copyMode": "Mode copie",
     "depotMode": "Mode dépôt",
     "searchRemedy": "Rechercher un remède",
     "prepareByCode": "Préparation par code",
     "copyRemedy": "Copier un échantillon",
-    "devStatus": "Android Dev Client validé"
+    "devStatus": "Android Dev Client validé",
+    "findCode": "Chercher un code",
+    "favoriteCodes": "Codes favoris"
   },
   "search": {
     "title": "Recherche",
@@ -41,6 +44,7 @@
     "code": "Code",
     "category": "Catégorie",
     "prepare": "Préparer",
+    "newSearch": "Nouvelle recherche",
     "addToFavorites": "Ajouter aux favoris",
     "removeFromFavorites": "Retirer des favoris",
     "selectPotency": "Sélectionner la puissance"
@@ -84,11 +88,26 @@
   "settings": {
     "title": "Paramètres",
     "language": "Langue",
+    "languageAuto": "Automatique",
     "languageFr": "Français",
     "languageEn": "English",
-    "theme": "Thème",
+    "languageEs": "Español",
+    "theme": "Interface",
     "themeDark": "Sombre",
     "themeLight": "Clair",
+    "themeWood": "Bois RM03",
+    "sounds": "Sons",
+    "soundsButtons": "Sons des boutons",
+    "on": "Activé",
+    "off": "Désactivé",
+    "about": "À propos",
+    "appVersion": "Version 1.0.0",
+    "appLocation": "Créée à Biot, 06410, France",
+    "appLicense": "Licence open source MIT",
+    "updates": "Mises à jour",
+    "currentVersion": "Version actuelle : 1.0.0",
+    "updatesInfo": "Les mises à jour seront disponibles via Google Play lorsque l'application sera publiée.",
+    "checkUpdates": "Vérifier les mises à jour",
     "version": "Version"
   }
 }

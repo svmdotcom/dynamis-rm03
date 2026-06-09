@@ -26,8 +26,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     AsyncStorage.getItem(STORAGE_KEY).then((stored) => {
-      if (stored === 'dark' || stored === 'light') {
-        setThemeName(stored);
+      if (stored === 'dark' || stored === 'light' || stored === 'wood') {
+        setThemeName(stored as ThemeName);
       }
     });
   }, []);

@@ -1,10 +1,10 @@
 export { HomeScreen } from './HomeScreen';
 export { SearchScreen } from './SearchScreen';
-export { PlaceholderScreen as ResultScreen } from './PlaceholderScreen';
+export { ResultScreen } from './ResultScreen';
 export { PlaceholderScreen as PrepareScreen } from './PlaceholderScreen';
 export { PlaceholderScreen as SymptomSearchScreen } from './PlaceholderScreen';
-export { PlaceholderScreen as FavoritesScreen } from './PlaceholderScreen';
-export { PlaceholderScreen as ManualScreen } from './PlaceholderScreen';
+export { FavoritesScreen } from './FavoritesScreen';
+export { ManualScreen } from './ManualScreen';
 export { PlaceholderScreen as CopyModeScreen } from './PlaceholderScreen';
 export { PlaceholderScreen as DepotModeScreen } from './PlaceholderScreen';
-export { PlaceholderScreen as SettingsScreen } from './PlaceholderScreen';
+export { SettingsScreen } from './SettingsScreen';

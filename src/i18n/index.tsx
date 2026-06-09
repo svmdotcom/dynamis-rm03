@@ -1,12 +1,12 @@
 import React, { createContext, useCallback, useContext, useEffect, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Localization from 'expo-localization';
-import type { Language } from '../types';
+import type { Language, LanguagePref } from '../types';
 import fr from '../../locales/fr.json';
 import en from '../../locales/en.json';
+import es from '../../locales/es.json';
 
 const STORAGE_KEY = '@dynamis_lang';
-const DEFAULT_LANG: Language = 'fr';
 
 type LeafKeys<T extends object> = {
   [K in keyof T & string]: T[K] extends Record<string, unknown>
@@ -19,6 +19,7 @@ export type TranslationKey = LeafKeys<typeof fr>;
 const translations: Record<Language, typeof fr> = {
   fr,
   en: en as typeof fr,
+  es: es as typeof fr,
 };
 
 function resolve(obj: unknown, path: string): string {
@@ -34,34 +35,43 @@ function resolve(obj: unknown, path: string): string {
 
 function detectDeviceLang(): Language {
   const code = Localization.getLocales()[0]?.languageCode ?? 'fr';
-  return code === 'en' ? 'en' : 'fr';
+  if (code === 'en') return 'en';
+  if (code === 'es') return 'es';
+  return 'fr';
+}
+
+function resolveLanguage(pref: LanguagePref): Language {
+  return pref === 'auto' ? detectDeviceLang() : pref;
 }
 
 interface I18nContextValue {
   t: (key: TranslationKey) => string;
   lang: Language;
-  setLang: (lang: Language) => void;
+  langPref: LanguagePref;
+  setLangPref: (pref: LanguagePref) => void;
 }
 
 const I18nContext = createContext<I18nContextValue | null>(null);
 
 export function I18nProvider({ children }: { children: React.ReactNode }) {
-  const [lang, setLangState] = useState<Language>(DEFAULT_LANG);
+  const [langPref, setLangPrefState] = useState<LanguagePref>('auto');
 
   useEffect(() => {
     AsyncStorage.getItem(STORAGE_KEY).then((stored) => {
-      if (stored === 'fr' || stored === 'en') {
-        setLangState(stored);
+      if (stored === 'fr' || stored === 'en' || stored === 'es' || stored === 'auto') {
+        setLangPrefState(stored as LanguagePref);
       } else {
-        setLangState(detectDeviceLang());
+        setLangPrefState('auto');
       }
     });
   }, []);
 
-  const setLang = useCallback((newLang: Language) => {
-    setLangState(newLang);
-    AsyncStorage.setItem(STORAGE_KEY, newLang);
+  const setLangPref = useCallback((pref: LanguagePref) => {
+    setLangPrefState(pref);
+    AsyncStorage.setItem(STORAGE_KEY, pref);
   }, []);
+
+  const lang = resolveLanguage(langPref);
 
   const t = useCallback(
     (key: TranslationKey): string => resolve(translations[lang], key),
@@ -69,7 +79,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   );
 
   return (
-    <I18nContext.Provider value={{ t, lang, setLang }}>
+    <I18nContext.Provider value={{ t, lang, langPref, setLangPref }}>
       {children}
     </I18nContext.Provider>
   );

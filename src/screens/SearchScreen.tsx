@@ -1,6 +1,5 @@
 import React, { useState, useCallback } from 'react';
 import {
-  SafeAreaView,
   View,
   Text,
   TextInput,
@@ -15,6 +14,9 @@ import { useTheme } from '../theme/ThemeContext';
 import { useI18n } from '../i18n';
 import { remedies, nameFuse, codeFuse } from '../data';
 import { runSearch } from '../utils/searchUtils';
+import { ScreenHeader } from '../components/ScreenHeader';
+import { ScreenBottomNav } from '../components/ScreenBottomNav';
+import { ScreenBackground } from '../components/ScreenBackground';
 
 type Nav = NativeStackNavigationProp<RootStackParamList, 'Search'>;
 type Route = RouteProp<RootStackParamList, 'Search'>;
@@ -39,7 +41,7 @@ export function SearchScreen() {
   const renderItem = useCallback(({ item }: { item: SearchResult }) => (
     <TouchableOpacity
       style={[styles.resultCard, { backgroundColor: theme.card, borderColor: theme.border }]}
-      onPress={() => {}}
+      onPress={() => navigation.navigate('Result', { remedy: item.item })}
       activeOpacity={0.7}
     >
       <View style={styles.resultMain}>
@@ -48,19 +50,14 @@ export function SearchScreen() {
       </View>
       <Text style={[styles.resultCode, { color: theme.accent }]}>{item.item.code}</Text>
     </TouchableOpacity>
-  ), [theme]);
+  ), [theme, navigation]);
 
   const isEmpty = query.trim().length === 0;
   const noResults = !isEmpty && results.length === 0;
 
   return (
-    <SafeAreaView style={[styles.container, { backgroundColor: theme.bg }]}>
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => navigation.goBack()} hitSlop={styles.hitSlop}>
-          <Text style={[styles.back, { color: theme.accent }]}>{'‹'}</Text>
-        </TouchableOpacity>
-        <Text style={[styles.title, { color: theme.textPrimary }]}>{t('search.title')}</Text>
-      </View>
+    <ScreenBackground style={styles.container}>
+      <ScreenHeader title={t('search.title')} />
 
       <TextInput
         style={[styles.input, {
@@ -120,38 +117,18 @@ export function SearchScreen() {
         data={results}
         keyExtractor={item => item.item.id}
         renderItem={renderItem}
+        style={styles.flatList}
         contentContainerStyle={styles.list}
         keyboardShouldPersistTaps="handled"
       />
-    </SafeAreaView>
+      <ScreenBottomNav />
+    </ScreenBackground>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 16,
-  },
-  header: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginTop: 16,
-    marginBottom: 16,
-    gap: 12,
-  },
-  back: {
-    fontSize: 32,
-    lineHeight: 36,
-  },
-  hitSlop: {
-    top: 12,
-    bottom: 12,
-    left: 12,
-    right: 12,
-  },
-  title: {
-    fontSize: 22,
-    fontWeight: '600',
   },
   input: {
     borderWidth: 1,
@@ -159,12 +136,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
     paddingVertical: 12,
     fontSize: 16,
+    marginHorizontal: 16,
+    marginTop: 12,
     marginBottom: 12,
   },
   modeRow: {
     flexDirection: 'row',
     gap: 8,
     marginBottom: 16,
+    paddingHorizontal: 16,
   },
   modeBtn: {
     paddingHorizontal: 20,
@@ -179,6 +159,7 @@ const styles = StyleSheet.create({
   hint: {
     alignItems: 'center',
     marginTop: 48,
+    paddingHorizontal: 16,
   },
   hintText: {
     fontSize: 15,
@@ -187,9 +168,11 @@ const styles = StyleSheet.create({
   hintSub: {
     fontSize: 13,
   },
+  flatList: { flex: 1 },
   list: {
     gap: 10,
-    paddingBottom: 24,
+    paddingBottom: 16,
+    paddingHorizontal: 16,
   },
   resultCard: {
     flexDirection: 'row',

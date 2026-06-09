@@ -5,6 +5,7 @@
     "save": "Save",
     "delete": "Delete",
     "back": "Back",
+    "home": "Home",
     "close": "Close",
     "search": "Search",
     "loading": "Loading...",
@@ -15,18 +16,20 @@
   },
   "home": {
     "title": "Dynamis RM03",
-    "subtitle": "Codes and settings for RM03",
+    "subtitle": "RM03 codes and settings",
     "searchPlaceholder": "Remedy name or code...",
     "symptomSearch": "Symptom search",
     "favorites": "Favorites",
-    "manual": "Manual",
+    "manual": "Instructions",
     "settings": "Settings",
     "copyMode": "Copy mode",
     "depotMode": "Depot mode",
     "searchRemedy": "Search a remedy",
     "prepareByCode": "Prepare by code",
     "copyRemedy": "Copy a sample",
-    "devStatus": "Android Dev Client validated"
+    "devStatus": "Android Dev Client validated",
+    "findCode": "Find a code",
+    "favoriteCodes": "Favorite codes"
   },
   "search": {
     "title": "Search",
@@ -41,6 +44,7 @@
     "code": "Code",
     "category": "Category",
     "prepare": "Prepare",
+    "newSearch": "New search",
     "addToFavorites": "Add to favorites",
     "removeFromFavorites": "Remove from favorites",
     "selectPotency": "Select potency"
@@ -84,11 +88,26 @@
   "settings": {
     "title": "Settings",
     "language": "Language",
+    "languageAuto": "Automatic",
     "languageFr": "Français",
     "languageEn": "English",
-    "theme": "Theme",
+    "languageEs": "Español",
+    "theme": "Interface",
     "themeDark": "Dark",
     "themeLight": "Light",
+    "themeWood": "Wood RM03",
+    "sounds": "Sounds",
+    "soundsButtons": "Button sounds",
+    "on": "On",
+    "off": "Off",
+    "about": "About",
+    "appVersion": "Version 1.0.0",
+    "appLocation": "Created in Biot, 06410, France",
+    "appLicense": "MIT open source license",
+    "updates": "Updates",
+    "currentVersion": "Current version: 1.0.0",
+    "updatesInfo": "Updates will be available through Google Play when the app is published.",
+    "checkUpdates": "Check for updates",
     "version": "Version"
   }
 }
