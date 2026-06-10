@@ -35,6 +35,6 @@ const styles = StyleSheet.create({
   fill: { flex: 1 },
   overlay: {
     flex: 1,
-    backgroundColor: 'rgba(42, 26, 10, 0.18)',
+    backgroundColor: 'rgba(20, 10, 0, 0.42)',
   },
 });
