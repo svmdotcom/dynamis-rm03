@@ -10,7 +10,7 @@ import type { Theme, ThemeName } from '../types';
 import { themes } from './colors';
 
 const STORAGE_KEY = '@dynamis_theme';
-const DEFAULT_THEME: ThemeName = 'dark';
+const DEFAULT_THEME: ThemeName = 'wood';
 
 interface ThemeContextValue {
   theme: Theme;
