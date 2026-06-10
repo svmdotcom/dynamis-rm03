@@ -26,7 +26,7 @@ export function ScreenBottomNav() {
   };
 
   return (
-    <View style={[styles.bar, { backgroundColor: theme.card, borderTopColor: theme.border, paddingBottom: insets.bottom + 10 }]}>
+    <View style={[styles.bar, { backgroundColor: theme.card, borderTopColor: theme.border, height: 72 + insets.bottom, paddingTop: 8, paddingBottom: insets.bottom + 8 }]}>
       <TouchableOpacity onPress={goBack} hitSlop={HIT_SLOP} style={styles.btn} activeOpacity={0.7}>
         <Text style={[styles.label, { color: theme.textPrimary }]}>{'‹ '}{t('common.back')}</Text>
       </TouchableOpacity>
@@ -39,7 +39,6 @@ export function ScreenBottomNav() {
 
 const styles = StyleSheet.create({
   bar: {
-    minHeight: 72,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
