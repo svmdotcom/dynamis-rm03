@@ -1,0 +1,858 @@
+{
+  "meta": {
+    "name": "Dynamis RM03 - configuration recherche homéopathique v2",
+    "version": "2.0.0",
+    "purpose": "Améliorer la précision et la facilité de recherche en langage courant sans modifier les codes RM03.",
+    "homeopathy_only": true,
+    "web_enrichment_scope": "Structure de répertoire, vocabulaire et hiérarchie. Les correspondances remède-problème restent issues prioritairement des livres de l'utilisateur.",
+    "web_sources": [
+      {
+        "title": "Kent's Repertory",
+        "url": "https://www.homeoint.org/hidb/kent/repertory.htm",
+        "use": "hiérarchie des rubriques : tête, yeux, vision, oreilles, audition, nez, gorge, estomac, etc."
+      },
+      {
+        "title": "Boericke Repertory",
+        "url": "https://www.homeoint.org/books4/boerirep/",
+        "use": "sous-rubriques anatomiques et symptomatiques, notamment yeux/oreilles."
+      },
+      {
+        "title": "NCCIH - Homeopathy",
+        "url": "https://www.nccih.nih.gov/health/homeopathy",
+        "use": "notice de sécurité et distinction entre répertoire traditionnel et efficacité clinique démontrée."
+      }
+    ]
+  },
+  "ui": {
+    "home_title": "Dynamis RM03",
+    "home_subtitle": "Codes et répertoire homéopathique RM03",
+    "home_search_card_title": "Rechercher un remède homéopathique",
+    "home_search_card_subtitle": "À partir de symptômes ou d’un problème de santé",
+    "screen_title": "Recherche homéopathique par symptômes",
+    "placeholder": "Ex. : oreille qui siffle, yeux rouges, toux sèche…",
+    "badge": "Répertoire homéopathique",
+    "notice_short": "Correspondances issues d’ouvrages et répertoires homéopathiques. Ne constitue pas un diagnostic médical.",
+    "notice_evidence": "L’efficacité de l’homéopathie n’est pas établie pour une affection spécifique ; ne pas retarder des soins médicaux nécessaires."
+  },
+  "search_rules": {
+    "important_change": "Classer d’abord la condition/problème, puis classer les remèdes à l’intérieur de cette condition. Ne jamais afficher tous les remèdes d’une rubrique large comme s’ils étaient également pertinents.",
+    "single_body_part_query": "Si la requête ne contient qu’une zone anatomique (ex. oreille, yeux), afficher d’abord les propositions de précision, pas une longue liste de remèdes.",
+    "do_not_search_in": [
+      "noms de remèdes pour trouver une condition",
+      "posologies",
+      "phrases de traitement",
+      "search_text brut non filtré"
+    ],
+    "fields_and_weights": {
+      "label_exact": 140,
+      "label_phrase": 100,
+      "lay_alias_exact": 95,
+      "alias": 85,
+      "keywords_v2": 60,
+      "symptom_phrase": 45,
+      "symptom_token": 18,
+      "raw_source_context": 2
+    },
+    "minimum_coverage_multiword": 0.6,
+    "max_condition_results": 8,
+    "max_remedies_initially": 5,
+    "require_word_boundaries": true,
+    "broad_condition_penalty": 0.45,
+    "multi_source_remedy_bonus": 15
+  },
+  "ontology": {
+    "oreille": {
+      "aliases": [
+        "oreille",
+        "oreilles",
+        "audition",
+        "entendre",
+        "auditif"
+      ],
+      "refinements": [
+        {
+          "label": "Douleur d’oreille",
+          "terms": [
+            "douleur oreille",
+            "otalgie"
+          ]
+        },
+        {
+          "label": "Bourdonnements / sifflements",
+          "terms": [
+            "bourdonnement oreille",
+            "sifflement oreille",
+            "acouphene",
+            "acouphenes"
+          ]
+        },
+        {
+          "label": "Otite / oreille inflammée",
+          "terms": [
+            "otite",
+            "inflammation oreille"
+          ]
+        },
+        {
+          "label": "Oreille bouchée",
+          "terms": [
+            "oreille bouchee",
+            "bouchon",
+            "cerumen",
+            "catarrhe tubaire"
+          ]
+        },
+        {
+          "label": "Baisse d’audition / surdité",
+          "terms": [
+            "baisse audition",
+            "surdite",
+            "mal entendre"
+          ]
+        },
+        {
+          "label": "Écoulement de l’oreille",
+          "terms": [
+            "ecoulement oreille",
+            "otorrhee"
+          ]
+        },
+        {
+          "label": "Vertiges / oreille interne",
+          "terms": [
+            "vertige",
+            "oreille interne",
+            "labyrinthe"
+          ]
+        },
+        {
+          "label": "Démangeaisons",
+          "terms": [
+            "demangeaison oreille",
+            "prurit oreille"
+          ]
+        }
+      ],
+      "web_repertory_sections": [
+        "Ear",
+        "Hearing"
+      ]
+    },
+    "yeux": {
+      "aliases": [
+        "oeil",
+        "oeils",
+        "yeux",
+        "vue",
+        "vision",
+        "oculaire",
+        "paupiere",
+        "paupières"
+      ],
+      "refinements": [
+        {
+          "label": "Yeux rouges / conjonctivite",
+          "terms": [
+            "yeux rouges",
+            "rougeur yeux",
+            "conjonctivite"
+          ]
+        },
+        {
+          "label": "Douleur des yeux",
+          "terms": [
+            "douleur yeux",
+            "douleur oeil"
+          ]
+        },
+        {
+          "label": "Démangeaisons",
+          "terms": [
+            "demangeaison yeux",
+            "prurit yeux"
+          ]
+        },
+        {
+          "label": "Larmoiement",
+          "terms": [
+            "larmoiement",
+            "yeux qui pleurent"
+          ]
+        },
+        {
+          "label": "Sécheresse",
+          "terms": [
+            "yeux secs",
+            "secheresse oculaire"
+          ]
+        },
+        {
+          "label": "Photophobie",
+          "terms": [
+            "photophobie",
+            "gene lumiere",
+            "lumiere fait mal aux yeux"
+          ]
+        },
+        {
+          "label": "Paupière / orgelet / chalazion",
+          "terms": [
+            "paupiere",
+            "orgelet",
+            "chalazion"
+          ]
+        },
+        {
+          "label": "Taches / mouches volantes",
+          "terms": [
+            "taches noires",
+            "mouches volantes",
+            "corps flottants"
+          ]
+        },
+        {
+          "label": "Baisse de vision",
+          "terms": [
+            "baisse vision",
+            "vision trouble",
+            "mal voir"
+          ]
+        },
+        {
+          "label": "Cataracte",
+          "terms": [
+            "cataracte"
+          ]
+        }
+      ],
+      "web_repertory_sections": [
+        "Eye",
+        "Vision"
+      ]
+    },
+    "nez": {
+      "aliases": [
+        "nez",
+        "nasal",
+        "narine",
+        "sinus"
+      ],
+      "refinements": [
+        {
+          "label": "Nez bouché",
+          "terms": [
+            "nez bouche",
+            "congestion nasale"
+          ]
+        },
+        {
+          "label": "Nez qui coule",
+          "terms": [
+            "nez coule",
+            "ecoulement nasal",
+            "coryza"
+          ]
+        },
+        {
+          "label": "Éternuements",
+          "terms": [
+            "eternuement",
+            "eternuements"
+          ]
+        },
+        {
+          "label": "Sinusite",
+          "terms": [
+            "sinusite",
+            "douleur sinus"
+          ]
+        },
+        {
+          "label": "Saignement de nez",
+          "terms": [
+            "saignement nez",
+            "epistaxis"
+          ]
+        },
+        {
+          "label": "Perte / trouble de l’odorat",
+          "terms": [
+            "odorat",
+            "perte odorat",
+            "anosmie"
+          ]
+        }
+      ],
+      "web_repertory_sections": [
+        "Nose"
+      ]
+    },
+    "gorge": {
+      "aliases": [
+        "gorge",
+        "pharynx",
+        "larynx",
+        "amygdale",
+        "amygdales"
+      ],
+      "refinements": [
+        {
+          "label": "Mal de gorge",
+          "terms": [
+            "mal gorge",
+            "douleur gorge"
+          ]
+        },
+        {
+          "label": "Angine / amygdales",
+          "terms": [
+            "angine",
+            "amygdalite",
+            "amygdales"
+          ]
+        },
+        {
+          "label": "Gorge sèche",
+          "terms": [
+            "gorge seche"
+          ]
+        },
+        {
+          "label": "Enrouement",
+          "terms": [
+            "enrouement",
+            "voix rauque"
+          ]
+        },
+        {
+          "label": "Difficulté à avaler",
+          "terms": [
+            "difficulte avaler",
+            "deglutition"
+          ]
+        }
+      ],
+      "web_repertory_sections": [
+        "Throat",
+        "Larynx and trachea"
+      ]
+    },
+    "tete": {
+      "aliases": [
+        "tete",
+        "crane",
+        "cephalee",
+        "migraine",
+        "mal tete"
+      ],
+      "refinements": [
+        {
+          "label": "Mal de tête",
+          "terms": [
+            "mal de tete",
+            "cephalee"
+          ]
+        },
+        {
+          "label": "Migraine",
+          "terms": [
+            "migraine"
+          ]
+        },
+        {
+          "label": "Vertige",
+          "terms": [
+            "vertige",
+            "etourdissement"
+          ]
+        },
+        {
+          "label": "Douleur frontale",
+          "terms": [
+            "front",
+            "douleur front"
+          ]
+        },
+        {
+          "label": "Douleur occipitale / nuque",
+          "terms": [
+            "occiput",
+            "nuque",
+            "arriere tete"
+          ]
+        }
+      ],
+      "web_repertory_sections": [
+        "Head",
+        "Vertigo"
+      ]
+    },
+    "respiration": {
+      "aliases": [
+        "respiration",
+        "respirer",
+        "souffle",
+        "bronche",
+        "bronches",
+        "poumon",
+        "poumons"
+      ],
+      "refinements": [
+        {
+          "label": "Toux sèche",
+          "terms": [
+            "toux seche"
+          ]
+        },
+        {
+          "label": "Toux grasse",
+          "terms": [
+            "toux grasse",
+            "expectoration"
+          ]
+        },
+        {
+          "label": "Essoufflement",
+          "terms": [
+            "essoufflement",
+            "dyspnee"
+          ]
+        },
+        {
+          "label": "Bronchite",
+          "terms": [
+            "bronchite"
+          ]
+        },
+        {
+          "label": "Asthme",
+          "terms": [
+            "asthme"
+          ]
+        },
+        {
+          "label": "Oppression thoracique",
+          "terms": [
+            "oppression",
+            "poitrine serree"
+          ]
+        }
+      ],
+      "web_repertory_sections": [
+        "Respiration",
+        "Cough",
+        "Chest"
+      ]
+    },
+    "digestif": {
+      "aliases": [
+        "ventre",
+        "estomac",
+        "digestion",
+        "digestif",
+        "intestin",
+        "intestins",
+        "selles"
+      ],
+      "refinements": [
+        {
+          "label": "Nausées",
+          "terms": [
+            "nausee",
+            "nausees"
+          ]
+        },
+        {
+          "label": "Vomissements",
+          "terms": [
+            "vomissement",
+            "vomissements"
+          ]
+        },
+        {
+          "label": "Ballonnements / gaz",
+          "terms": [
+            "ballonnement",
+            "gaz",
+            "flatulence",
+            "aerophagie"
+          ]
+        },
+        {
+          "label": "Douleur d’estomac",
+          "terms": [
+            "douleur estomac",
+            "gastralgie"
+          ]
+        },
+        {
+          "label": "Douleur de ventre",
+          "terms": [
+            "douleur ventre",
+            "douleur abdominale"
+          ]
+        },
+        {
+          "label": "Diarrhée",
+          "terms": [
+            "diarrhee"
+          ]
+        },
+        {
+          "label": "Constipation",
+          "terms": [
+            "constipation"
+          ]
+        },
+        {
+          "label": "Acidité / brûlures",
+          "terms": [
+            "acidite",
+            "brulure estomac",
+            "reflux"
+          ]
+        }
+      ],
+      "web_repertory_sections": [
+        "Stomach",
+        "Abdomen",
+        "Rectum",
+        "Stool"
+      ]
+    },
+    "peau": {
+      "aliases": [
+        "peau",
+        "cutane",
+        "cutanee",
+        "dermatologique"
+      ],
+      "refinements": [
+        {
+          "label": "Démangeaisons",
+          "terms": [
+            "demangeaison",
+            "prurit"
+          ]
+        },
+        {
+          "label": "Eczéma",
+          "terms": [
+            "eczema"
+          ]
+        },
+        {
+          "label": "Urticaire",
+          "terms": [
+            "urticaire"
+          ]
+        },
+        {
+          "label": "Acné",
+          "terms": [
+            "acne",
+            "boutons"
+          ]
+        },
+        {
+          "label": "Brûlure",
+          "terms": [
+            "brulure peau"
+          ]
+        },
+        {
+          "label": "Verrues",
+          "terms": [
+            "verrue",
+            "verrues"
+          ]
+        },
+        {
+          "label": "Psoriasis",
+          "terms": [
+            "psoriasis"
+          ]
+        },
+        {
+          "label": "Bleus / hématomes",
+          "terms": [
+            "bleu",
+            "hematome",
+            "ecchymose"
+          ]
+        }
+      ],
+      "web_repertory_sections": [
+        "Skin"
+      ]
+    },
+    "muscles_articulations": {
+      "aliases": [
+        "muscle",
+        "muscles",
+        "articulation",
+        "articulations",
+        "dos",
+        "genou",
+        "epaule",
+        "coude",
+        "cheville",
+        "poignet"
+      ],
+      "refinements": [
+        {
+          "label": "Courbatures",
+          "terms": [
+            "courbature",
+            "courbatures"
+          ]
+        },
+        {
+          "label": "Crampes",
+          "terms": [
+            "crampe",
+            "crampes"
+          ]
+        },
+        {
+          "label": "Douleurs articulaires",
+          "terms": [
+            "douleur articulaire",
+            "articulation douloureuse"
+          ]
+        },
+        {
+          "label": "Arthrose",
+          "terms": [
+            "arthrose"
+          ]
+        },
+        {
+          "label": "Rhumatismes",
+          "terms": [
+            "rhumatisme",
+            "rhumatismes"
+          ]
+        },
+        {
+          "label": "Entorse",
+          "terms": [
+            "entorse"
+          ]
+        },
+        {
+          "label": "Tendinite",
+          "terms": [
+            "tendinite"
+          ]
+        },
+        {
+          "label": "Mal de dos / lombaires",
+          "terms": [
+            "mal dos",
+            "lombalgie",
+            "douleur lombaire"
+          ]
+        }
+      ],
+      "web_repertory_sections": [
+        "Back",
+        "Extremities",
+        "Locomotor system"
+      ]
+    },
+    "sommeil": {
+      "aliases": [
+        "sommeil",
+        "dormir",
+        "nuit",
+        "insomnie"
+      ],
+      "refinements": [
+        {
+          "label": "Insomnie",
+          "terms": [
+            "insomnie",
+            "difficulte dormir"
+          ]
+        },
+        {
+          "label": "Réveils nocturnes",
+          "terms": [
+            "reveil nuit",
+            "reveils nocturnes"
+          ]
+        },
+        {
+          "label": "Cauchemars / terreurs nocturnes",
+          "terms": [
+            "cauchemar",
+            "terreur nocturne"
+          ]
+        },
+        {
+          "label": "Somnolence",
+          "terms": [
+            "somnolence",
+            "envie dormir"
+          ]
+        }
+      ],
+      "web_repertory_sections": [
+        "Sleep"
+      ]
+    },
+    "urinaire": {
+      "aliases": [
+        "urine",
+        "urines",
+        "urinaire",
+        "vessie",
+        "rein",
+        "reins",
+        "uriner"
+      ],
+      "refinements": [
+        {
+          "label": "Brûlures en urinant",
+          "terms": [
+            "brulure urine",
+            "brulure uriner"
+          ]
+        },
+        {
+          "label": "Cystite",
+          "terms": [
+            "cystite"
+          ]
+        },
+        {
+          "label": "Envies fréquentes",
+          "terms": [
+            "uriner souvent",
+            "envie frequente uriner"
+          ]
+        },
+        {
+          "label": "Douleur rénale",
+          "terms": [
+            "douleur rein",
+            "colique nephretique"
+          ]
+        },
+        {
+          "label": "Énurésie",
+          "terms": [
+            "enuresie",
+            "pipi au lit"
+          ]
+        }
+      ],
+      "web_repertory_sections": [
+        "Urinary organs",
+        "Urine"
+      ]
+    },
+    "femme": {
+      "aliases": [
+        "regles",
+        "menstruation",
+        "menstruel",
+        "femme",
+        "ovaire",
+        "uterus",
+        "menopause"
+      ],
+      "refinements": [
+        {
+          "label": "Règles douloureuses",
+          "terms": [
+            "regles douloureuses",
+            "dysmenorrhee"
+          ]
+        },
+        {
+          "label": "Règles abondantes",
+          "terms": [
+            "regles abondantes",
+            "menorragie"
+          ]
+        },
+        {
+          "label": "Règles absentes",
+          "terms": [
+            "absence regles",
+            "amenorrhee"
+          ]
+        },
+        {
+          "label": "Syndrome prémenstruel",
+          "terms": [
+            "syndrome premenstruel",
+            "spm"
+          ]
+        },
+        {
+          "label": "Ménopause / bouffées de chaleur",
+          "terms": [
+            "menopause",
+            "bouffee chaleur"
+          ]
+        }
+      ],
+      "web_repertory_sections": [
+        "Genitalia female"
+      ]
+    },
+    "stress_humeur": {
+      "aliases": [
+        "stress",
+        "angoisse",
+        "anxiete",
+        "peur",
+        "humeur",
+        "nerveux",
+        "nervosite"
+      ],
+      "refinements": [
+        {
+          "label": "Anxiété / angoisse",
+          "terms": [
+            "anxiete",
+            "angoisse"
+          ]
+        },
+        {
+          "label": "Trac",
+          "terms": [
+            "trac"
+          ]
+        },
+        {
+          "label": "Peur / panique",
+          "terms": [
+            "peur",
+            "panique"
+          ]
+        },
+        {
+          "label": "Irritabilité",
+          "terms": [
+            "irritabilite",
+            "nerveux"
+          ]
+        },
+        {
+          "label": "Choc émotionnel",
+          "terms": [
+            "choc emotionnel",
+            "emotion"
+          ]
+        }
+      ],
+      "web_repertory_sections": [
+        "Mind"
+      ]
+    }
+  }
+}

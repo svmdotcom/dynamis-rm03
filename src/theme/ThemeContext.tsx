@@ -10,7 +10,8 @@ import type { Theme, ThemeName } from '../types';
 import { themes } from './colors';
 
 const STORAGE_KEY = '@dynamis_theme';
-const DEFAULT_THEME: ThemeName = 'wood';
+/** Theme de demarrage en l'absence de preference enregistree. */
+const DEFAULT_THEME: ThemeName = 'light';
 
 interface ThemeContextValue {
   theme: Theme;

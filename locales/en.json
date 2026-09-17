@@ -16,9 +16,9 @@
   },
   "home": {
     "title": "Dynamis RM03",
-    "subtitle": "RM03 codes and settings",
+    "subtitle": "RM03 codes and homeopathic repertory",
     "searchPlaceholder": "Remedy name or code...",
-    "symptomSearch": "Symptom search",
+    "symptomSearch": "Find a homeopathic remedy",
     "favorites": "Favorites",
     "manual": "Instructions",
     "settings": "Settings",
@@ -29,7 +29,8 @@
     "copyRemedy": "Copy a sample",
     "devStatus": "Android Dev Client validated",
     "findCode": "Find a code",
-    "favoriteCodes": "Favorite codes"
+    "favoriteCodes": "Favorite codes",
+    "symptomSearchSubtitle": "From symptoms or a health problem"
   },
   "search": {
     "title": "Search",
@@ -62,10 +63,24 @@
     "count": "Strokes performed"
   },
   "symptomSearch": {
-    "title": "Symptom search",
-    "placeholder": "Describe the symptom...",
-    "noResults": "No remedy found",
-    "results": "Suggested remedies"
+    "title": "Homeopathic symptom search",
+    "placeholder": "E.g. ringing ear, red eyes, dry cough…",
+    "noResults": "No match found",
+    "results": "Suggested remedies",
+    "examples": "E.g. dry cough, allergy, muscle soreness, motion sickness…",
+    "emptyHint": "Type at least 3 characters to start the search.",
+    "noResultsHint": "Try another word or a simpler wording.",
+    "matches": "Matches:",
+    "noCode": "Code not found",
+    "disclaimer": "Matches come from homeopathic books and repertories. This is not a medical diagnosis.",
+    "badge": "Homeopathic repertory",
+    "refineTitle": "Narrow down the symptom:",
+    "remedies": "listed remedies",
+    "showMore": "Show the other listed remedies",
+    "citedIn": "Listed in",
+    "sources": "sources",
+    "source": "Source:",
+    "sourceUnknown": "Listed in the repertory"
   },
   "favorites": {
     "title": "Favorites",

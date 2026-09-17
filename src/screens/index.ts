@@ -1,8 +1,9 @@
+export { SplashScreen } from './SplashScreen';
 export { HomeScreen } from './HomeScreen';
 export { SearchScreen } from './SearchScreen';
 export { ResultScreen } from './ResultScreen';
 export { PlaceholderScreen as PrepareScreen } from './PlaceholderScreen';
-export { PlaceholderScreen as SymptomSearchScreen } from './PlaceholderScreen';
+export { SymptomSearchScreen } from './SymptomSearchScreen';
 export { FavoritesScreen } from './FavoritesScreen';
 export { ManualScreen } from './ManualScreen';
 export { PlaceholderScreen as CopyModeScreen } from './PlaceholderScreen';

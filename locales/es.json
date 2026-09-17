@@ -16,9 +16,9 @@
   },
   "home": {
     "title": "Dynamis RM03",
-    "subtitle": "Códigos y ajustes RM03",
+    "subtitle": "Códigos y repertorio homeopático RM03",
     "searchPlaceholder": "Nombre o código del remedio...",
-    "symptomSearch": "Búsqueda por síntomas",
+    "symptomSearch": "Buscar un remedio homeopático",
     "favorites": "Favoritos",
     "manual": "Instrucciones",
     "settings": "Ajustes",
@@ -29,7 +29,8 @@
     "copyRemedy": "Copiar una muestra",
     "devStatus": "Android Dev Client validado",
     "findCode": "Buscar un código",
-    "favoriteCodes": "Códigos favoritos"
+    "favoriteCodes": "Códigos favoritos",
+    "symptomSearchSubtitle": "A partir de síntomas o de un problema de salud"
   },
   "search": {
     "title": "Búsqueda",
@@ -62,10 +63,24 @@
     "count": "Golpes realizados"
   },
   "symptomSearch": {
-    "title": "Búsqueda por síntomas",
-    "placeholder": "Describe el síntoma...",
-    "noResults": "No se encontró ningún remedio",
-    "results": "Remedios sugeridos"
+    "title": "Búsqueda homeopática por síntomas",
+    "placeholder": "Ej.: zumbido de oído, ojos rojos, tos seca…",
+    "noResults": "No se encontró ninguna coincidencia",
+    "results": "Remedios sugeridos",
+    "examples": "Ej.: tos seca, alergia, agujetas, mareo por movimiento…",
+    "emptyHint": "Escribe al menos 3 caracteres para iniciar la búsqueda.",
+    "noResultsHint": "Prueba con otra palabra o una formulación más simple.",
+    "matches": "Coincidencias:",
+    "noCode": "Código no encontrado",
+    "disclaimer": "Las coincidencias provienen de obras y repertorios homeopáticos. No constituyen un diagnóstico médico.",
+    "badge": "Repertorio homeopático",
+    "refineTitle": "Precisa el síntoma:",
+    "remedies": "remedios citados",
+    "showMore": "Ver los demás remedios citados",
+    "citedIn": "Citado en",
+    "sources": "fuentes",
+    "source": "Fuente:",
+    "sourceUnknown": "Citado en el repertorio"
   },
   "favorites": {
     "title": "Favoritos",

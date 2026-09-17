@@ -7,6 +7,10 @@ import en from '../../locales/en.json';
 import es from '../../locales/es.json';
 
 const STORAGE_KEY = '@dynamis_lang';
+/** Langue de demarrage en l'absence de preference enregistree.
+ *  On ne suit plus la langue du telephone tant que l'utilisateur n'a pas
+ *  choisi lui-meme "auto" dans les parametres. */
+const DEFAULT_LANG_PREF: LanguagePref = 'fr';
 
 type LeafKeys<T extends object> = {
   [K in keyof T & string]: T[K] extends Record<string, unknown>
@@ -54,14 +58,14 @@ interface I18nContextValue {
 const I18nContext = createContext<I18nContextValue | null>(null);
 
 export function I18nProvider({ children }: { children: React.ReactNode }) {
-  const [langPref, setLangPrefState] = useState<LanguagePref>('auto');
+  const [langPref, setLangPrefState] = useState<LanguagePref>(DEFAULT_LANG_PREF);
 
   useEffect(() => {
     AsyncStorage.getItem(STORAGE_KEY).then((stored) => {
       if (stored === 'fr' || stored === 'en' || stored === 'es' || stored === 'auto') {
         setLangPrefState(stored as LanguagePref);
       } else {
-        setLangPrefState('auto');
+        setLangPrefState(DEFAULT_LANG_PREF);
       }
     });
   }, []);

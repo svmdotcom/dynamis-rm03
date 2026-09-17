@@ -16,9 +16,9 @@
   },
   "home": {
     "title": "Dynamis RM03",
-    "subtitle": "Codes et réglages RM03",
+    "subtitle": "Codes et répertoire homéopathique RM03",
     "searchPlaceholder": "Nom ou code du remède...",
-    "symptomSearch": "Recherche par symptômes",
+    "symptomSearch": "Rechercher un remède homéopathique",
     "favorites": "Favoris",
     "manual": "Mode d'emploi",
     "settings": "Paramètres",
@@ -29,7 +29,8 @@
     "copyRemedy": "Copier un échantillon",
     "devStatus": "Android Dev Client validé",
     "findCode": "Chercher un code",
-    "favoriteCodes": "Codes favoris"
+    "favoriteCodes": "Codes favoris",
+    "symptomSearchSubtitle": "À partir de symptômes ou d’un problème de santé"
   },
   "search": {
     "title": "Recherche",
@@ -62,10 +63,24 @@
     "count": "Coups effectués"
   },
   "symptomSearch": {
-    "title": "Recherche par symptômes",
-    "placeholder": "Décrivez le symptôme...",
-    "noResults": "Aucun remède trouvé",
-    "results": "Remèdes suggérés"
+    "title": "Recherche homéopathique par symptômes",
+    "placeholder": "Ex. : oreille qui siffle, yeux rouges, toux sèche…",
+    "noResults": "Aucune correspondance trouvée",
+    "results": "Remèdes suggérés",
+    "examples": "Ex. : toux sèche, allergie, courbatures, mal des transports…",
+    "emptyHint": "Saisissez au moins 3 caractères pour lancer la recherche.",
+    "noResultsHint": "Essayez un autre mot ou une formulation plus simple.",
+    "matches": "Correspondances :",
+    "noCode": "Code non trouvé",
+    "disclaimer": "Correspondances issues d’ouvrages et répertoires homéopathiques. Ne constitue pas un diagnostic médical.",
+    "badge": "Répertoire homéopathique",
+    "refineTitle": "Précisez le symptôme :",
+    "remedies": "remèdes cités",
+    "showMore": "Voir les autres remèdes cités",
+    "citedIn": "Cité dans",
+    "sources": "sources",
+    "source": "Source :",
+    "sourceUnknown": "Source citée dans le répertoire"
   },
   "favorites": {
     "title": "Favoris",
